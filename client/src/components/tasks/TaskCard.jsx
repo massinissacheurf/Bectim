@@ -82,7 +82,7 @@ const TaskCard = ({ task }) => {
         </div>
 
         {/* subtasks */}
-        {task?.subTasks?.length > 0 ? (
+        {/* {task?.subTasks?.length > 0 ? (
           <div className='py-4 border-t border-gray-200 dark:border-gray-700'>
             <h5 className='text-base line-clamp-1 text-black dark:text-gray-400'>
               {task?.subTasks[0].title}
@@ -103,16 +103,16 @@ const TaskCard = ({ task }) => {
               <span className='text-gray-500'>No Sub-Task</span>
             </div>
           </div>
-        )}
+        )} */}
 
         <div className='w-full pb-2'>
           <button
-            disabled={user.isAdmin ? false : true}
+            disabled={user.isAdmin ? true : false}
             onClick={() => setOpen(true)}
             className='w-full flex gap-4 items-center text-sm text-gray-500 font-semibold disabled:cursor-not-allowed disabled:text-gray-300'
           >
             <IoMdAdd className='text-lg' />
-            <span>ADD SUBTASK</span>
+            <span>Créer PV</span>
           </button>
         </div>
       </div>

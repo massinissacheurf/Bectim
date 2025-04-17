@@ -41,43 +41,130 @@ const AddSubTask = ({ open, setOpen, id }) => {
             as='h2'
             className='text-base font-bold leading-6 text-gray-900 mb-4'
           >
-            ADD SUB-TASK
+            CRÉER PV
           </Dialog.Title>
           <div className='mt-2 flex flex-col gap-6'>
-            <Textbox
-              placeholder='Sub-Task title'
-              type='text'
-              name='title'
-              label='Title'
-              className='w-full rounded'
-              register={register("title", {
-                required: "Title is required!",
-              })}
-              error={errors.title ? errors.title.message : ""}
-            />
+            <div className='flex items-center gap-4'>
+              <Textbox
+                placeholder='Numéro BL'
+                type='text'
+                name='numBL'
+                label='Numéro BL'
+                className='w-full rounded'
+                register={register("numBL", {
+                  required: "Numéro BL est requis!",
+                })}
+                error={errors.numBL ? errors.numBL.message : ""}
+              />
+              <Textbox
+                placeholder='Numéro Facture'
+                type='text'
+                name='numFacture'
+                label='Numéro Facture'
+                className='w-full rounded'
+                register={register("numFacture", {
+                  required: "Numéro Facture est requis!",
+                })}
+                error={errors.numFacture ? errors.numFacture.message : ""}
+              />
+            </div>
 
             <div className='flex items-center gap-4'>
+              <Textbox
+                placeholder='Numéro Intervention'
+                type='text'
+                name='numIntervention'
+                label='Numéro Intervention'
+                className='w-full rounded'
+                register={register("numIntervention", {
+                  required: "Numéro Intervention est requis!",
+                })}
+                error={errors.numIntervention ? errors.numIntervention.message : ""}
+              />
+              <Textbox
+                placeholder='Importateur'
+                type='text'
+                name='importateur'
+                label='Importateur'
+                className='w-full rounded'
+                register={register("importateur", {
+                  required: "Importateur est requis!",
+                })}
+                error={errors.importateur ? errors.importateur.message : ""}
+              />
+            </div>
+
+            <div className='flex items-center gap-4'>
+              <Textbox
+                placeholder='Transitaire'
+                type='text'
+                name='transitaire'
+                label='Transitaire'
+                className='w-full rounded'
+                register={register("transitaire", {
+                  required: "Transitaire est requis!",
+                })}
+                error={errors.transitaire ? errors.transitaire.message : ""}
+              />
+              <Textbox
+                placeholder='Lien Intervention'
+                type='text'
+                name='lienIntervention'
+                label='Lien Intervention'
+                className='w-full rounded'
+                register={register("lienIntervention")}
+                error={errors.lienIntervention ? errors.lienIntervention.message : ""}
+              />
+            </div>
+
+            <div className='flex items-center gap-4'>
+              <Textbox
+                placeholder='Numéro TC'
+                type='text'
+                name='numTC'
+                label='Numéro TC'
+                className='w-full rounded'
+                register={register("numTC", {
+                  required: "Numéro TC est requis!",
+                })}
+                error={errors.numTC ? errors.numTC.message : ""}
+              />
+              <Textbox
+                placeholder='Numéro Scellé'
+                type='text'
+                name='numScelle'
+                label='Numéro Scellé'
+                className='w-full rounded'
+                register={register("numScelle", {
+                  required: "Numéro Scellé est requis!",
+                })}
+                error={errors.numScelle ? errors.numScelle.message : ""}
+              />
+            </div>
+
+            <div className='flex items-center gap-4'>
+              <Textbox
+                placeholder='Nombre de Colis'
+                type='number'
+                name='nbColis'
+                label='Nombre de Colis'
+                className='w-full rounded'
+                register={register("nbColis", {
+                  required: "Nombre de Colis est requis!",
+                  valueAsNumber: true,
+                })}
+                error={errors.nbColis ? errors.nbColis.message : ""}
+              />
               <Textbox
                 placeholder='Date'
                 type='date'
                 name='date'
-                label='Task Date'
+                label='Date'
                 className='w-full rounded'
                 register={register("date", {
-                  required: "Date is required!",
+                  required: "Date est requise!",
                 })}
                 error={errors.date ? errors.date.message : ""}
-              />
-              <Textbox
-                placeholder='Tag'
-                type='text'
-                name='tag'
-                label='Tag'
-                className='w-full rounded'
-                register={register("tag", {
-                  required: "Tag is required!",
-                })}
-                error={errors.tag ? errors.tag.message : ""}
               />
             </div>
           </div>
@@ -90,14 +177,14 @@ const AddSubTask = ({ open, setOpen, id }) => {
               <Button
                 type='submit'
                 className='bg-blue-600 text-sm font-semibold text-white hover:bg-blue-700 sm:ml-3 sm:w-auto'
-                label='Add Task'
+                label='Créer PV'
               />
 
               <Button
                 type='button'
                 className='bg-white border text-sm font-semibold text-gray-900 sm:w-auto'
                 onClick={() => setOpen(false)}
-                label='Cancel'
+                label='Annuler'
               />
             </div>
           )}
