@@ -284,6 +284,10 @@ const getTask = asyncHandler(async (req, res) => {
         select: "name title role email",
       })
       .populate({
+        path: "pvs",
+        select: "type numPvSurveillance numPvDepotage importateur createdAt createdBy",
+      })
+      .populate({
         path: "activities.by",
         select: "name",
       })

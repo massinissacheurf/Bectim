@@ -33,13 +33,11 @@ const taskSchema = new Schema(
         by: { type: Schema.Types.ObjectId, ref: "User" },
       },
     ],
-    subTasks: [
+    pvs: [
       {
-        title: String,
-        date: Date,
-        tag: String,
-        isCompleted: Boolean,
-      },
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "PV"
+      }
     ],
     description: String,
     assets: [String],

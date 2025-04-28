@@ -15,6 +15,8 @@ import {
   StatusPage,
 } from "./pages";
 import { setOpenSidebar } from "./redux/slices/authSlice";
+import PvPage from "./pages/PvPage";
+import PvView from "./pages/PvView";
 
 function Layout() {
   const { user } = useSelector((state) => state.auth);
@@ -106,6 +108,8 @@ const App = () => {
             <Route path='/todo/:status?' element={<Tasks />} />
             <Route path='/trashed' element={<Trash />} />
             <Route path='/task/:id' element={<TaskDetail />} />
+            <Route path="/pvs/:id" element={<PvPage />} />
+            <Route path="/pvs/:id" element={<PvView />} />
             <Route path='/team' element={<Users />} />
             <Route path='/status' element={<StatusPage />} />
           </Route>

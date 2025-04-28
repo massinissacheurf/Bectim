@@ -15,7 +15,7 @@ import {
   useTrashTastMutation,
 } from "../../redux/slices/api/taskApiSlice";
 import ConfirmatioDialog from "../ConfirmationDialog";
-import AddSubTask from "./AddSubTask";
+import CreerPv from "./CreerPv";
 import AddTask from "./AddTask";
 import TaskColor from "./TaskColor";
 import { useSelector } from "react-redux";
@@ -179,9 +179,10 @@ export default function TaskDialog({ task }) {
       onClick: () => setOpenEdit(true),
     },
     {
-      label: "Add Sub-Task",
+      label: "Creer PV",
       icon: <MdAdd className='mr-2 h-5 w-5' aria-hidden='true' />,
       onClick: () => setOpen(true),
+      adminOnly : false,
     },
     {
       label: "Duplicate",
@@ -205,7 +206,7 @@ export default function TaskDialog({ task }) {
                   <Menu.Item key={el.label}>
                     {({ active }) => (
                       <button
-                        disabled={index === 0 ? false : !user.isAdmin}
+                      disabled={el.adminOnly === false ? false : !user.isAdmin}
                         onClick={el?.onClick}
                         className={`${
                           active ? "bg-blue-500 text-white" : "text-gray-900"
@@ -255,7 +256,7 @@ export default function TaskDialog({ task }) {
         task={task}
         key={new Date().getTime()}
       />
-      <AddSubTask open={open} setOpen={setOpen} />
+      <CreerPv open={open} setOpen={setOpen} id={task._id} />
       <ConfirmatioDialog
         open={openDialog}
         setOpen={setOpenDialog}

@@ -10,6 +10,17 @@ export const formatDate = (date) => {
   return formattedDate;
 };
 
+export const formatDateSafe = (dateValue) => {
+  if (!dateValue) return '';
+  try {
+    const date = new Date(dateValue);
+    if (isNaN(date.getTime())) return '';
+    return date.toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+  } catch (error) {
+    return '';
+  }
+};
+
 export function dateFormatter(dateString) {
   const inputDate = new Date(dateString);
 

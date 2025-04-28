@@ -1,4 +1,4 @@
-import AddSubTask from "./AddSubTask";
+import CreerPv from "./CreerPv";
 import AddTask from "./AddTask";
 import BoardView from "./BoardView";
 import TaskAssets from "./TaskAssets";
@@ -9,7 +9,7 @@ import TaskTitle from "./TaskTitle";
 import UserList from "./UsersSelect";
 
 export {
-  AddSubTask,
+  CreerPv,
   AddTask,
   BoardView,
   TaskAssets,
