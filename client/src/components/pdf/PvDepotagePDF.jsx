@@ -16,37 +16,53 @@ const styles = StyleSheet.create({
     padding: 30,
     fontFamily: 'Roboto',
     fontSize: 10,
-    backgroundColor: '#f8f8f8',
+    backgroundColor: '#ffffff',
+    paddingBottom: 60, // Espace pour le pied de page
+  },
+  headerContainer: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+  },
+  headerCurve: {
+    height: 10,
+    backgroundColor: '#dbeafe', // bg-blue-100
+    borderBottomLeftRadius: '100%',
+    borderBottomRightRadius: '100%',
+    marginBottom: 15,
   },
   header: {
     flexDirection: 'row',
-    marginBottom: 20,
+    marginBottom: 10,
     alignItems: 'center',
   },
   logo: {
     width: 50,
     height: 50,
+    borderRadius: 25,
+    backgroundColor: '#1e3a8a',
   },
   headerText: {
     marginLeft: 10,
     fontSize: 9,
-    color: '#003366',
+    color: '#1e3a8a',
   },
   companyName: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#003366',
+    color: '#1e3a8a',
   },
   expertise: {
     fontSize: 10,
     fontWeight: 'bold',
     marginTop: 2,
-    color: '#003366',
+    color: '#1e3a8a',
   },
   separator: {
-    width: 100,
+    width: 30,
     height: 1,
-    backgroundColor: '#003366',
+    backgroundColor: '#1e3a8a',
     marginTop: 2,
     marginBottom: 2,
   },
@@ -54,226 +70,227 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginTop: 20,
+    marginTop: 10,
     marginBottom: 5,
     textDecoration: 'underline',
+    color: '#000000',
   },
   pvNumber: {
     fontSize: 12,
     textAlign: 'center',
     marginBottom: 20,
     textDecoration: 'underline',
+    color: '#000000',
   },
   mainTable: {
     display: 'table',
     width: 'auto',
     borderStyle: 'solid',
     borderWidth: 1,
-    borderColor: '#000',
+    borderColor: '#9ca3af',
     marginBottom: 15,
   },
   tableRow: {
     flexDirection: 'row',
     borderBottomWidth: 1,
-    borderBottomColor: '#000',
-    borderBottomStyle: 'solid',
-    minHeight: 25,
-    alignItems: 'center',
-  },
-  tableRowNoBorder: {
-    flexDirection: 'row',
-    minHeight: 25,
-    alignItems: 'center',
-  },
-  tableColHeader: {
-    width: '33%',
-    borderRightWidth: 1,
-    borderRightColor: '#000',
-    borderRightStyle: 'solid',
-    padding: 5,
-    fontWeight: 'bold',
-  },
-  tableColHeaderLast: {
-    width: '34%',
-    padding: 5,
-    fontWeight: 'bold',
+    borderBottomColor: '#9ca3af',
   },
   tableCol: {
-    width: '33%',
+    width: '33.33%',
     borderRightWidth: 1,
-    borderRightColor: '#000',
-    borderRightStyle: 'solid',
+    borderRightColor: '#9ca3af',
     padding: 5,
   },
   tableColLast: {
-    width: '34%',
+    width: '33.33%',
     padding: 5,
   },
-  sectionTitle: {
-    marginTop: 15,
-    marginBottom: 5,
+  labelText: {
     fontWeight: 'bold',
+    color: '#000000',
+    textDecoration: 'underline',
+    marginRight: 5,
+  },
+  sectionTitle: {
+    marginTop: 10,
+    marginBottom: 5,
+    fontSize: 12,
+    fontWeight: 'bold',
+    color: '#000000',
     textDecoration: 'underline',
   },
   containerTable: {
     display: 'table',
-    width: '100%',
+    width: 'auto',
     borderStyle: 'solid',
     borderWidth: 1,
-    borderColor: '#000',
+    borderColor: '#9ca3af',
     marginBottom: 15,
   },
   containerTableHeader: {
     flexDirection: 'row',
-    backgroundColor: '#e0e0e0',
-    borderBottomWidth: 1,
-    borderBottomColor: '#000',
-    alignItems: 'center',
+    backgroundColor: '#f3f4f6',
   },
   containerTableCol1: {
     width: '40%',
     borderRightWidth: 1,
-    borderRightColor: '#000',
-    padding: 5,
+    borderRightColor: '#9ca3af',
+    padding: 6,
     fontWeight: 'bold',
     textAlign: 'center',
   },
   containerTableCol2: {
     width: '30%',
     borderRightWidth: 1,
-    borderRightColor: '#000',
-    padding: 5,
+    borderRightColor: '#9ca3af',
+    padding: 6,
     fontWeight: 'bold',
     textAlign: 'center',
   },
   containerTableCol3: {
     width: '30%',
-    padding: 5,
+    padding: 6,
     fontWeight: 'bold',
     textAlign: 'center',
   },
   containerTableRow: {
     flexDirection: 'row',
-    borderBottomWidth: 1,
-    borderBottomColor: '#000',
-    alignItems: 'center',
   },
   containerTableDataCol1: {
     width: '40%',
     borderRightWidth: 1,
-    borderRightColor: '#000',
-    padding: 5,
+    borderRightColor: '#9ca3af',
+    padding: 6,
+    textAlign: 'center',
   },
   containerTableDataCol2: {
     width: '30%',
     borderRightWidth: 1,
-    borderRightColor: '#000',
-    padding: 5,
+    borderRightColor: '#9ca3af',
+    padding: 6,
+    textAlign: 'center',
   },
   containerTableDataCol3: {
     width: '30%',
-    padding: 5,
+    padding: 6,
     textAlign: 'center',
   },
   damageTable: {
     display: 'table',
-    width: '100%',
+    width: 'auto',
     borderStyle: 'solid',
     borderWidth: 1,
-    borderColor: '#000',
-    marginBottom: 15,
+    borderColor: '#9ca3af',
   },
   damageTableHeader: {
     flexDirection: 'row',
-    backgroundColor: '#a0c8e0', // Couleur bleu clair comme dans l'image
-    borderBottomWidth: 1,
-    borderBottomColor: '#000',
-    alignItems: 'center',
-  },
-  damageTableRow: {
-    flexDirection: 'row',
-    borderBottomWidth: 1,
-    borderBottomColor: '#000',
+    backgroundColor: '#dbeafe',
   },
   damageTableCol1: {
-    width: '35%',
+    width: '33.33%',
     borderRightWidth: 1,
-    borderRightColor: '#000',
-    padding: 8,
-    textAlign: 'center',
+    borderRightColor: '#9ca3af',
+    padding: 6,
     fontWeight: 'bold',
+    textAlign: 'center',
   },
   damageTableCol2: {
     width: '50%',
     borderRightWidth: 1,
-    borderRightColor: '#000',
-    padding: 8,
-    textAlign: 'center',
+    borderRightColor: '#9ca3af',
+    padding: 6,
     fontWeight: 'bold',
+    textAlign: 'center',
   },
   damageTableCol3: {
-    width: '15%',
-    padding: 8,
-    textAlign: 'center',
+    width: '16.67%',
+    padding: 6,
     fontWeight: 'bold',
-  },
-  damageContentRow: {
-    borderBottomWidth: 0,
-    paddingVertical: 5,
-  },
-  damageDataCol1: {
-    width: '35%',
-    borderRightWidth: 1,
-    borderRightColor: '#000',
-    padding: 8,
     textAlign: 'center',
   },
-  damageDataCol2: {
+  damageTableRow: {
+    flexDirection: 'row',
+    borderTopWidth: 1,
+    borderTopColor: '#9ca3af',
+  },
+  damageTableDataCol1: {
+    width: '33.33%',
+    borderRightWidth: 1,
+    borderRightColor: '#9ca3af',
+    padding: 6,
+    textAlign: 'center',
+  },
+  damageTableDataCol2: {
     width: '50%',
     borderRightWidth: 1,
-    borderRightColor: '#000',
-    padding: 8,
+    borderRightColor: '#9ca3af',
+    padding: 6,
   },
-  damageDataCol3: {
-    width: '15%',
-    padding: 8,
+  damageTableDataCol3: {
+    width: '16.67%',
+    padding: 6,
     textAlign: 'center',
   },
+  // Style modifié pour les lots
   lotSection: {
-    marginTop: 10,
-    marginLeft: 10,
+    padding: 8,
+    // Suppression de la bordure supérieure
+    // borderTopWidth: 1,
+    // borderTopColor: '#9ca3af',
+    // Suppression du fond de couleur
+    // backgroundColor: '#f9fafb',
   },
   lotTitle: {
     fontWeight: 'bold',
+    color: '#1e3a8a', // Couleur bleue pour le titre du lot (comme dans l'image)
     marginBottom: 5,
-    textDecoration: 'underline',
   },
-  lotDetail: {
-    marginLeft: 20,
+  lotList: {
+    paddingLeft: 15,
+  },
+  lotItem: {
+    flexDirection: 'row',
     marginBottom: 3,
   },
   bulletPoint: {
     width: 10,
-  },
-  lotItem: {
-    flexDirection: 'row',
-    marginBottom: 2,
   },
   signature: {
     marginTop: 30,
     marginRight: 30,
     textAlign: 'right',
   },
+  footer: {
+    position: 'absolute',
+    bottom: 30,
+    left: 30,
+    right: 30,
+    borderTopWidth: 1,
+    borderTopColor: '#d1d5db',
+    paddingTop: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  footerText: {
+    fontSize: 9,
+    color: '#6b7280',
+  },
 });
 
 const PvDepotagePDF = ({ pv }) => {
   // Formatage de date
   const formatDate = (dateString) => {
-    if (!dateString) return "";
+    if (!dateString) return "N/A";
     try {
-      return new Date(dateString).toLocaleDateString('fr-FR');
+      const date = new Date(dateString);
+      if (isNaN(date.getTime())) return "N/A";
+      return date.toLocaleDateString('fr-FR', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+      });
     } catch (e) {
-      return "";
+      return "N/A";
     }
   };
 
@@ -281,79 +298,121 @@ const PvDepotagePDF = ({ pv }) => {
   const formattedPvNumber = pv?.numPvDepotage
     ? `N° ${pv.numPvDepotage.toString().padStart(3, "0")}/BCTM/${new Date().getFullYear()}`
     : `N° ---/BCTM/${new Date().getFullYear()}`;
+  
+  // Composant d'en-tête réutilisable
+  const Header = () => (
+    <View style={styles.headerContainer} fixed>
+      <View style={styles.headerCurve} />
+      <View style={styles.header}>
+        <Image 
+          src="https://bectim.com/images/logo%20bectim.png" 
+          style={styles.logo} 
+          cache={false}
+        />
+        <View style={styles.headerText}>
+          <Text style={styles.companyName}>BECTIM</Text>
+          <View style={styles.separator} />
+          <Text style={styles.expertise}>EXPERTISE</Text>
+          <Text>Société d'Expertise et de contrôle Technique Industriel & Maritime</Text>
+          <Text>Villa 05, Rue Ahmed Assas El Harrach – Alger</Text>
+          <Text>Email : bectim_expertise@yahoo.fr</Text>
+          <Text>Tel / Mobile : 021.83.24.85 / 0555.01.26.73</Text>
+        </View>
+      </View>
+    </View>
+  );
+  
+  // Composant de pied de page réutilisable
+  const Footer = ({ pageNumber }) => (
+    <View style={styles.footer} fixed>
+      <Text style={styles.footerText}>
+        {pv?.numPvDepotage ? `${pv.numPvDepotage.toString().padStart(3, '0')}/BCTM/${new Date().getFullYear()}` : "---/BCTM/----"}
+      </Text>
+      <Text style={styles.footerText}>{pageNumber}</Text>
+    </View>
+  );
 
   return (
     <Document>
       <Page size="A4" style={styles.page}>
-        {/* En-tête avec logo */}
-        <View style={styles.header}>
-          <Image 
-            src="https://bectim.com/images/logo%20bectim.png" 
-            style={styles.logo} 
-            cache={false}
-          />
-          <View style={styles.headerText}>
-            <Text style={styles.companyName}>BECTIM</Text>
-            <View style={styles.separator} />
-            <Text style={styles.expertise}>EXPERTISE</Text>
-            <Text>Société d'Expertise et de contrôle Technique Industriel & Maritime</Text>
-            <Text>Villa 05, Rue Ahmed Assas El Harrach – Alger</Text>
-            <Text>Email : bectim_expertise@yahoo.fr</Text>
-            <Text>Tel / Mobile : 021.83.24.85 / 0555.01.26.73</Text>
-          </View>
-        </View>
+        {/* En-tête fixe sur toutes les pages */}
+        <Header />
 
         {/* Titre et numéro du PV */}
         <Text style={styles.title}>PROCES VERBAL DE DEPOTAGE</Text>
         <Text style={styles.pvNumber}>{formattedPvNumber}</Text>
 
-        {/* Informations principales en tableau - 3 colonnes x 3 lignes */}
+        {/* Tableau d'informations principales */}
         <View style={styles.mainTable}>
           <View style={styles.tableRow}>
             <View style={styles.tableCol}>
-              <Text>Date : {formatDate(pv?.dateIntervention)}</Text>
+              <Text>
+                <Text style={styles.labelText}>Date</Text> : {formatDate(pv?.dateIntervention || new Date())}
+              </Text>
             </View>
             <View style={styles.tableCol}>
-              <Text>Lieu : {pv?.lieuDepotage || pv?.lieuIntervention || ""}</Text>
+              <Text>
+                <Text style={styles.labelText}>Lieu</Text> : {pv?.lieuDepotage || pv?.lieuIntervention || "N/A"}
+              </Text>
             </View>
             <View style={styles.tableColLast}>
-              <Text>Réceptionnaire : {pv?.importateur || ""}</Text>
+              <Text>
+                <Text style={styles.labelText}>Réceptionnaire</Text> : {pv?.importateur || "N/A"}
+              </Text>
             </View>
           </View>
-
+          
           <View style={styles.tableRow}>
             <View style={styles.tableCol}>
-              <Text>N° BL : {pv?.numBL || ""}</Text>
+              <Text>
+                <Text style={styles.labelText}>N° BL</Text> : {pv?.numBL || "N/A"}
+              </Text>
             </View>
             <View style={styles.tableCol}>
-              <Text>N° CDE : {pv?.depotage?.numCde || ""}</Text>
+              <Text>
+                <Text style={styles.labelText}>N° CDE</Text> : {pv?.depotage?.numCde || "N/A"}
+              </Text>
             </View>
             <View style={styles.tableColLast}>
-              <Text>Navire : {pv?.navire || ""}</Text>
+              <Text>
+                <Text style={styles.labelText}>Navire</Text> : {pv?.navire || "N/A"}
+              </Text>
             </View>
           </View>
-
-          <View style={styles.tableRowNoBorder}>
+          
+          <View style={styles.tableRow}>
             <View style={styles.tableCol}>
-              <Text>Embarquement : {pv?.portChargement || ""}</Text>
+              <Text>
+                <Text style={styles.labelText}>Embarquement</Text> : {pv?.portChargement || "N/A"}
+              </Text>
             </View>
             <View style={styles.tableCol}>
-              <Text>Débarquement : {pv?.portDechargement || ""}</Text>
+              <Text>
+                <Text style={styles.labelText}>Débarquement</Text> : {pv?.portDechargement || "N/A"}
+              </Text>
             </View>
             <View style={styles.tableColLast}>
-              <Text>Gros/Article : {pv?.grosArticle || ""}</Text>
+              <Text>
+                <Text style={styles.labelText}>Gros/Article</Text> : {pv?.grosArticle || "N/A"}
+              </Text>
             </View>
           </View>
-
-          <View style={styles.tableRowNoBorder}>
+          
+          <View style={[styles.tableRow, { borderBottomWidth: 0 }]}>
             <View style={styles.tableCol}>
-              <Text>Produit : {pv?.depotage?.produit || ""}</Text>
+              <Text>
+                <Text style={styles.labelText}>Produit</Text> : {pv?.depotage?.produit || "N/A"}
+              </Text>
             </View>
             <View style={styles.tableCol}>
-              <Text>Conditionnement : {pv?.conditionnement || "Cartons / Palettes"}</Text>
+              <Text>
+                <Text style={styles.labelText}>Conditionnement</Text> : {pv?.conditionnement || "Cartons / Palettes"}
+              </Text>
             </View>
             <View style={styles.tableColLast}>
-              <Text>Nombre de colis : {pv?.nbColis || ""}</Text>
+              <Text>
+                <Text style={styles.labelText}>Nombre de colis</Text> : {pv?.nbColis || "N/A"}
+              </Text>
             </View>
           </View>
         </View>
@@ -368,32 +427,35 @@ const PvDepotagePDF = ({ pv }) => {
             <Text style={styles.containerTableCol3}>Observation</Text>
           </View>
           <View style={styles.containerTableRow}>
-            <Text style={styles.containerTableDataCol1}>TC N° : {pv?.numTC || ""}</Text>
-            <Text style={styles.containerTableDataCol2}>{pv?.numScelle || ""}</Text>
+            <Text style={styles.containerTableDataCol1}>TC N° : {pv?.numTC || "N/A"}</Text>
+            <Text style={styles.containerTableDataCol2}>{pv?.numScelle || "N/A"}</Text>
             <Text style={styles.containerTableDataCol3}>Conforme</Text>
           </View>
         </View>
 
-        {/* Section des dommages/constats */}
+        {/* Constat des dommages */}
         <Text style={styles.sectionTitle}>Constat des dommages:</Text>
-
+        
         <View style={styles.damageTable}>
           <View style={styles.damageTableHeader}>
             <Text style={styles.damageTableCol1}>Conteneur N°</Text>
             <Text style={styles.damageTableCol2}>Nuance</Text>
             <Text style={styles.damageTableCol3}>Quantité</Text>
           </View>
+          
           <View style={styles.damageTableRow}>
-            <Text style={styles.damageDataCol1}>TC N°: {pv?.numTC || ""}</Text>
-            <Text style={styles.damageDataCol2}>{pv?.depotage?.nuance || ""}</Text>
-            <Text style={styles.damageDataCol3}>{pv?.depotage?.quantite || pv?.nbColis || ""}</Text>
+            <Text style={styles.damageTableDataCol1}>TC N° : {pv?.numTC || "N/A"}</Text>
+            <Text style={styles.damageTableDataCol2}>{pv?.depotage?.nuance || "N/A"}</Text>
+            <Text style={styles.damageTableDataCol3}>{pv?.depotage?.quantite || pv?.nbColis || "N/A"}</Text>
           </View>
-
-          {/* Lots détaillés */}
+        </View>
+        
+        {/* Lots détaillés - maintenant sans séparation */}
+        <View style={{ padding: 5, borderWidth:1 }}>
           {pv?.depotage?.lot && pv.depotage.lot.map((lot, index) => (
             <View key={index} style={styles.lotSection}>
-              <Text style={styles.lotTitle}>Lot N° : {lot.numLot}</Text>
-              <View style={styles.lotDetail}>
+              <Text style={styles.lotTitle}>Lot N° : {lot.numLot || `Lot ${index + 1}`}</Text>
+              <View style={styles.lotList}>
                 <View style={styles.lotItem}>
                   <Text style={styles.bulletPoint}>• </Text>
                   <Text>En bon état : {lot.bonEtat || "0"} caisses</Text>
@@ -411,18 +473,13 @@ const PvDepotagePDF = ({ pv }) => {
           ))}
         </View>
 
-        {/* Observations si présentes */}
-        {pv?.depotage?.observations && (
-          <View>
-            <Text style={styles.sectionTitle}>Observations:</Text>
-            <Text>{pv.depotage.observations}</Text>
-          </View>
-        )}
-
         {/* Signature */}
         <View style={styles.signature}>
           <Text>Alger le {formatDate(new Date())}</Text>
         </View>
+        
+        {/* Pied de page fixe sur toutes les pages */}
+        <Footer pageNumber={1} />
       </Page>
     </Document>
   );

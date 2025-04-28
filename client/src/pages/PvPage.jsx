@@ -29,7 +29,7 @@ const PvPage = () => {
   return (
     <div className="container mx-auto px-4 py-6">
       {/* Barre d'actions en haut de la page */}
-      <div className="mb-6 flex justify-between items-center">
+      <div className="mb-6">
         <button
           onClick={() => navigate(-1)}
           className="bg-gray-200 text-gray-800 px-4 py-2 rounded-md flex items-center gap-2 hover:bg-gray-300"
@@ -37,11 +37,6 @@ const PvPage = () => {
           <FaArrowLeft />
           Retour
         </button>
-        
-        <h1 className="text-xl md:text-2xl font-bold text-center text-gray-800">
-          {data.pv.type === 'surveillance' ? 'PV de Surveillance' : 'PV de Dépotage'}{' '}
-          N° {data.pv.type === 'surveillance' ? data.pv.numPvSurveillance : data.pv.numPvDepotage}
-        </h1>
       </div>
 
       {/* Contenu du PV */}
